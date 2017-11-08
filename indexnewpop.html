@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>goodfood</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-state=1"/>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+
+    <!--    languages-->
+
+    <script type="text/javascript">
+        var arrLang = new Array();
+        arrLang['en'] = new Array();
+        arrLang['hi'] = new Array();
+        arrLang['en']['home'] = 'Home';
+        arrLang['en']['about'] = 'About Us';
+        arrLang['en']['contact'] = 'Contact Us';
+        arrLang['en']['eat'] = 'eat out';
+        arrLang['en']['neighbour'] = 'Your neighbourhood institution';
+
+        arrLang['hi']['home'] = 'घर';
+        arrLang['hi']['about'] = 'हमारे बारे में';
+        arrLang['hi']['contact'] = 'हमसे संपर्क करें';
+        arrLang['hi']['eat'] = 'बाहर खाना';
+        arrLang['hi']['neighbour'] = 'आपके पड़ोसी संस्था';
+        $(document).ready(function (e) {
+            $('.translate').click(function () {
+                var lang = $(this).attr('id');
+
+                $('.lang').each(function (index,element) {
+                    $(this).text(arrLang[lang][$(this).attr('key')]);
+                });
+            });
+        });
+    </script>
+
+    <style >
+        body{
+
+        }
+
+        .col-lg-2 a:hover{
+
+            text-decoration: none;
+        }
+
+
+        .img{
+            width:80%;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        /*menu*/
+        #menu ul{
+            list-style: none;
+        }
+
+        #menu ul li {
+            border-bottom: white;
+            float: left;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            padding-top: 0px;
+            line-height:35px;
+            position: relative;
+            color: #E1E9ED;
+            text-decoration-style: dashed;
+        }
+
+        #menu ul li a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            height: 40px;
+            font-family: 'PathwayGothic', sans-serif;
+            font-size: 30px;
+            width: max-content;
+        }
+
+        #menu ul li a:hover{
+            color:#EF4135;
+        }
+
+        #menu  ul ul{
+            position: absolute;
+            display: none;
+        }
+        #menu ul li:hover > ul{
+            display: block;
+            z-index: 99;
+
+        }
+
+        #menu ul ul li a{
+            border: none;
+        }
+        #menu ul li ul li{
+            border: none;
+            margin-left: -5px;
+        }
+        #menu ul li ul li a:hover{
+            text-decoration: underline;
+            color:#EF4135;
+        }
+
+        /*menu1*/
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #menu1 ul{
+            list-style: none;
+        }
+
+        #menu1 ul li {
+
+            float: left;
+
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            padding-top: 0px;
+            line-height:35px;
+            position: relative;
+
+
+        }
+        #menu1 ul li a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            height: 40px;
+            font-family: 'PathwayGothic', sans-serif;
+            font-size: 30px;
+            width: max-content;
+        }
+
+        #menu1 ul li a:hover{
+            color:#EF4135;
+            border-top: 4px solid #EF4135;
+        }
+
+        #menu1 ul ul{
+            position: absolute;
+            display: none;
+
+        }
+        #menu1 ul li:hover > ul{
+            display: block;
+            z-index: 99;
+
+        }
+        #menu1 ul li ul li a:hover{
+            /*text-decoration: underline;*/
+            color:#EF4135;
+        }
+
+        #menu1 ul li ul li{
+            width: 500 px;
+            display: inline-block;
+        }
+        footer{
+            background: #3b3b3b;
+            margin-top: 100px;
+            padding: 30px 0;
+            width:100%;
+        }
+
+        footer:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        footer ul{
+            float: left;
+            padding: 0;
+            list-style-type: none;
+            color: #eee;
+            width: 23%;
+            margin-right: 2%;
+        }
+
+        footer li{
+            margin: 10px 0;
+        }
+
+        footer a{
+            color: #eee;
+            text-decoration: none;
+        }
+
+
+        .just ul li{
+            list-style: none;
+            margin: 10px;
+
+        }
+        .just ul li a{
+            font-family: 'Courgette', cursive;
+
+            font-size: 1.5em;
+        }
+
+        #just1 ul li a{
+            color: darksalmon;
+            font-family: 'Slabo27px', serif;
+        }
+
+        #parallax1{
+            background:url('navimg1.jpg') no-repeat center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 400px;
+
+        }
+
+
+        .parallax{
+            background:url('eat.jpg') no-repeat center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 600px;
+
+        }
+        .parallax2{
+            background:url('ccc.jpg') no-repeat center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 400px;
+
+        }
+
+
+
+        .parallax3{
+            background:url('cooking.jpg') no-repeat center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 400px;
+
+        }
+
+
+        .parallax4{
+            background:url('pizza.jpg') no-repeat center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 700px;
+
+        }
+
+
+
+        /*        jagged border*/
+
+
+        .jagged-border {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.3) 0px 1px 2px);
+            filter: drop-shadow(rgba(0, 0, 0, 0.3) 0px 1px 2px);
+        }
+        .jagged-border:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -10px;
+            width: 100%;
+            height: 10px;
+        }
+
+        .darkgray-bg {
+            background: #1A52AE;
+        }
+        .darkgray-bg:before {
+            background: -webkit-linear-gradient(45deg, transparent 33.333%, #1A52AE 33.333%, #1A52AE 66.667%, transparent 66.667%), -webkit-linear-gradient(135deg, transparent 33.333%, #1A52AE 33.333%, #1A52AE 66.667%, transparent 66.667%);
+            background: linear-gradient(45deg, transparent 33.333%, #1A52AE 33.333%, #1A52AE 66.667%, transparent 66.667%), linear-gradient(-45deg, transparent 33.333%, #009FB7 33.333%, #009FB7 66.667%, transparent 66.667%);
+            background-size: 20px 40px;
+        }
+
+
+
+        /*        product solutions*/
+
+
+        div#myDiv {
+            -ms-transform: rotate(45deg); /* IE 9 */
+            -webkit-transform: rotate(45deg); /* Safari */
+            transform: rotate(45deg); /* Standard syntax */
+            width: 200px;
+            height: 200px;
+
+            border: 10px solid #1A52AE;
+            margin: 0;
+            padding: 0;
+
+        }
+
+
+        .product{
+
+            -lms-transform: rotate(-45deg); /* IE 9 */
+            -webkit-transform: rotate(-45deg); /* Safari */
+            transform: rotate(-45deg); /* Standard syntax */
+            margin-top:10%;
+            margin-left: 20%;
+
+        }
+        .hl2 {
+            border-bottom: 1px solid rgba(239, 65, 53, 1);
+            height: 0 !important;
+            min-height: 0 !important;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $("#myModal").modal('show');
+        });
+    </script>
+</head>
+<body>
+
+<!-- modal-->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-image: url('pop5new1.jpg'); height: 126px;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        &times;
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center; font-size: 1.5em; font-family: 'Questrial', sans-serif;">
+                <h4 class="modal-title" style="text-align: center; font-size: 1.7em;">
+                    Subscribe <h5 style="font-size: 1.3em;">to our free e-newsletter</h5> for food hacks and health tips for a better life!
+                </h4><br><br>
+                Name :
+                <input placeholder="name please..." type="text">
+                <br><br>
+
+                Email-id :
+                <input placeholder="email-id here..." type="text"><br><br>
+                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: transparent; border: solid black ; font-size: 30px;">
+                    SUBMIT
+                </button>
+            </div>
+            <div class="modal-footer" style="background-image: url('pop5footer.jpg') ; text-align: center ; padding: 7px; height: 68px;">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <button class="translate" id="en">English</button>
+    </div>
+    <div class="col-sm-6"><button class="translate" id="hi">Hindi</button>
+    </div>
+</div>
+
+<div class="container-fluid" style=";">
+    <div class="row">
+            <h1 style="text-align: center; font-family: 'Pacifico'; font-size: 85px ; color: #EF4135">
+                <img src="cherry.png" style="height: 125px">
+                GoodFoodism
+            </h1>
+
+    </div>
+    <div class="row"  >
+        <div class="col-lg-1">
+
+        </div>
+        <div class="col-lg-3" style="text-align: center ;height: 70px; border-bottom: 1px solid rgba(239, 65, 53, 1); border-top: 1px solid rgba(239, 65, 53, 1);">
+            <div style="text-align: center; margin-top: 10% ; font-family: 'PathwayGothic'">
+                <h4 style="letter-spacing: 0.07em">WE BELIEVE IN IT...</h4>
+            </div>
+        </div>
+        <div class="col-lg-4" style="margin: 0px; height: 70px; ">
+            <div class="gg" style=" margin-top: 4%; margin-left: 20% ; width: 60%; height: 34px; border-bottom: 17px solid rgba(239, 65, 53, 1); border-top: 17px solid rgba(239, 65, 53, 1); border-right: 20px solid white; border-left: 20px solid white">
+                <h5 style="line-height:-2">
+
+                </h5>
+            </div>
+            <!--<h3 style="text-align: center; font-family: 'PathwayGothic'">
+                San Francisco/ Since 2007
+            </h3>-->
+        </div>
+        <div class="col-lg-3" style=" ; height: 70px; border-bottom: 1px solid rgba(239, 65, 53, 1); border-top: 1px solid rgba(239, 65, 53, 1);">
+            <div style="text-align: center; margin-top: 10% ; font-family: 'PathwayGothic'">
+                <h4 style="letter-spacing: 0.07em">
+                    WITH THE BEST SOLUTIONS...
+                </h4>
+            </div>
+        </div>
+        <div class="col-lg-1">
+
+        </div>
+
+    </div>
+    <br>
+    <br>
+
+    <nav style="border-bottom: 0.5px solid #d9d9d9;padding-bottom: 5px;" >
+        <div class="container" style="width:100%;">
+            <div class="row">
+                <div class="col-lg-2 col-xs-4" id="menu1" >
+                    <ul>
+                        <li class="lang" key="eat">
+                            <a href="#" >
+                                eat out
+                            </a>
+                            <ul>
+                                <li><a href="restaurants.html">Restaurants</a></li>1
+                                <li><a href="#">Cafes</a></li>
+                                <li><a href="#">Eat Out</a></li>
+                                <li><a href="#">Good Food </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-xs-4" id="menu1">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                ReciPes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-xs-4" id="menu1">
+                    <ul>
+                        <li><a href="#"> <span>Good Living</span></a>
+                            <ul>
+                                <li><a href="#">ahmedabad</a></li>
+                                <li><a href="#">mumbai</a></li>
+                                <li><a href="#">chennai</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-xs-4" id="menu1">
+                    <ul><li><a href="products.html">Product Solutions</a></li></ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+</div>
+<br>
+
+<div class="row">
+    <div class="container-fluid" id="parallax1" style=" z-index:10;width:100%;height:700px; ">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-4">
+            <br>
+        </div>
+        <div class="col-sm-7">
+            <br>
+            <br>
+
+        </div>
+
+
+    </div>
+</div>
+
+<!--  Introduction  -->
+<div class="container">
+    <div class="jumbotron" style="background:white;">
+        <div class="row">
+            <div class="your" style="width:70%;margin-left:15%;margin-right:15%;">
+                <h1 style=" margin-left:40%;font-family: 'PatuaOne', cursive;font-size:2em; color: #1A52AE" class="lang" key=about>About</h1>
+                <h1 class="lang" key="neighbour" style="font-size:4em;font-family: 'BreeSerif', serif;
+ color:#ef4135;text-align:center;">YOUR NEIGHBORHOOD INSTITUTION</h1>
+                <h3 style="font-family: 'PatuaOne', cursive;font-size:2em; color: #1A52AE">
+                    welcome to our heath portal .Find all kinds of tips and tricks to avoid a spicy life AND ENJOY A HEALTHY ONE.
+                    We have been a leading consulting agency in health science and have patented 40+  healthy recipes.
+                </h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--  Product solutions  -->
+<div class="container">
+    <div class="jumbotron" style="background:white;">
+        <div class="row">
+            <div class="intro" style="width:80%;margin-right:10%;margin-left:10%;margin-bottom:40px; color:red;">
+                <h1 style="text-align:center;font-family: 'PatuaOne', cursive;font-size:5em; color: #ef4135">
+                    Product Solutions
+                </h1>
+            </div>
+            <br>
+            <br>
+            <div class="col-sm-4">
+
+                <div id="myDiv">
+                    <p class="product" style="font-family: 'PatuaOne', cursive;">
+                        <a href="products.html" style="color: #ef4135">
+                            weight management solutions.
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+
+                <div id="myDiv">
+                    <p class="product" style="font-family: 'PatuaOne', cursive;">
+                        <a href="#" style="color: #ef4135">
+                            Energy and Fitness.
+                    </a></p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+
+                <div id="myDiv">
+                    <p class="product" style="font-family: 'PatuaOne', cursive;">
+                        <a href="#" style="color: #ef4135">
+                            Targeted Nutrition.
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="parallax4">
+    <hr>
+    <div class="disha" style="width:70%;margin-left:15%;margin-right:15%;margin-top:18%; opacity:2;">
+        <h3 style="font-family: 'Oswald', sans-serif;color:#1A52AE;font-size:5em;">
+            "IT HAS BEEN YEARS SINCE I HAD ANY JUNK FOOD."
+        </h3>
+        <h1 style="margin-left:30%;
+               margin-top:5%;font-size:3em;font-family: 'Lobster', cursive;color:#1A52AE;">
+            -Disha Patani.
+        </h1>
+    </div>
+</div>
+
+
+<!--   Daily Neccessity     -->
+
+
+<div class="darkgray-bg jagged-border" >
+    <div class="intro" style="background:#1A52AE;width:100%;color:white;">
+
+        <div class="dailyp" style="width: 60%;margin-left: 20%;margin-right:20%; ">
+            <p style=" text-align:center;margin-top:10%; font-family: 'Arvo', serif;font-size:3em; color: #EFF1F3;padding:0;margin:0;">
+                DAILY NECCESSITIES
+            </p>
+        </div>
+
+
+    </div>
+</div>
+<div class="container-fluid" style="width: 80%;">
+
+    <div class="row" style="; width: 100%;padding: 0;margin: 0;">
+
+
+        <div class="col-sm-6" style="padding: 0;height: 400px;">
+            <article class="" >
+
+                <h3 style=" color:#ef4135;margin-top:10%;text-align:center;font-size:3em;font-family: 'BenchNine', sans-serif; ">
+                    HEALTHY BREAKFAST
+                </h3>
+                <br>
+
+                <h4 style="text-align:center;">
+                    <a href="#"  style="color:#ef4135;font-family: 'Cookie', cursive; font-size:3em;">
+                        The Start
+                    </a>
+                </h4>
+                <p style="text-align:center;font-size:1.5em;font-family: 'Questrial', sans-serif;color:#ef4135; ">
+                    Start your day right! Breakfast is important because it kick-starts your metabolism and provides energy for you to use throughout your day.
+                    <br>
+                    TIP: Healthy Breakfast, Healthy Choice.</p>
+                <a href="#" style="text-align:right;font-size:1.5em;font-family: 'Questrial', sans-serif;color:#ef4135;">
+                    more such tips...
+                </a>
+            </article>
+
+        </div>
+        <div class="col-sm-6" style="padding: 0; background:#ef4135;height: 400px;">
+            <img src="breakfast.png" style="width:90%;margin-right:5%;margin-left:5%;margin-top:15%;">
+        </div>
+    </div>
+    <div class="row" style="; width: 100%;padding: 0;margin: 0;">
+
+
+
+        <div class="col-sm-6" style=" background:#1A52AE;padding: 0;height: 400px;">
+            <img src="fitness.png" style="width:80%;margin-right:10%;margin-left:10%;height:90%;">
+        </div>
+        <div class="col-sm-6" style="padding: 0; background:white;height: 400px;">
+            <article class="" >
+
+                <h3 style=" color:#1A52AE;margin-top:10%;text-align:center;font-size:3em;font-family: 'BenchNine', sans-serif; ">FITNESS TIPS</h3>
+                <br>
+
+                <h4 style="text-align:center;">
+                    <a href="#"  style="color:#1A52AE;font-family: 'Cookie', cursive;font-size:3em;">
+                        Why be active ?
+                    </a>
+                </h4>
+                <p style="text-align:center;font-size:1em;font-family: 'Questrial', sans-serif;color:#1A52AE;
+">
+                    Regular physical activity has many benefits. It is a potent stress buster, it can help keep weight off and it lowers your risk of developing major chronic diseases. Additional benefits include stronger bones and muscles,s improved body shape, a boost to mental wellbeing and a change in your outlook on life</p>
+                <a href="#" style="text-align:righst;font-size:1.5em;font-family: 'Questrial', sans-serif;color:#1A52AE;">
+                    more such tips...
+                </a>
+            </article>
+
+        </div>
+    </div>
+
+
+
+    <div class="row" style="; width: 100%;padding: 0;margin: 0;">
+
+
+        <div class="col-sm-6" style="padding: 0;height: 400px;">
+            <article class="" >
+
+                <h3 style=" color:#ef4135;margin-top:10%;text-align:center;font-size:3em;font-family: 'BenchNine', sans-serif; ">BALANCED DIET</h3>
+                <br>
+
+                <h4 style="text-align:center;"><a href="#"  style="color:#ef4135;font-family: 'Cookie', cursive;
+font-size:3em;">Maintain Good Nutrition</a></h4>
+                <p style="text-align:center;font-size:1.5em;font-family: 'Questrial', sans-serif;color:#ef4135; ">"Start everyday with balanced nutrition and essential nutrients for a healthy, active lifestyle."</p>
+                <a href="#" style="text-align: right;font-size:1.5em;font-family: 'Questrial', sans-serif;color:#ef4135;">
+                    more such tips...
+                </a>
+            </article>
+
+        </div>
+        <div class="col-sm-6" style="padding: 0; background:#ef4135;height: 400px;">
+            <img src="balanced.png" style="width:90%;margin-right:5%;margin-left:5%;margin-top:5%;">
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="parallax2">
+
+</div>
+<!--daily bites & just open -->
+
+<div class="container">
+    <div class="jumbotron" style="background:white;">
+        <div class="row">
+            <p style=" text-align:center;font-family: 'PatuaOne', cursive;font-size:5em; color: #1A52AE">Live Healthy</p>
+            <div class="col-sm-6">
+                <article class="" >
+                    <img src="whatto2.jpg" style="width:400px; heigth:400px;">
+                    <h3  style="font-family: 'Acme', sans-serif; color: #EF4135">Balanced Diet</h3>
+                    <h4>
+                        <a href="#" style="font-family: 'DancingScript', cursive;font-size:2em; color: #1A52AE">
+                            Fitness
+                        </a>
+                    </h4>
+                    <p style="font-size:1em;font-family: 'Questrial', sans-serif;">
+                        A snack-shot of the year that was and the new places we loved.
+                    </p>
+
+                </article>
+            </div>
+            <div class="col-sm-6">
+                <article class="" >
+                    <img src="food1.jpg" style="width:100px; ">
+                    <h3  style="font-family: 'Acme', sans-serif; color: #EF4135;">Food Collection</h3>
+                    <h4><a href="#" style="font-family: 'DancingScript', cursive;font-size:2em; color: #1A52AE">Balanced Diet</a></h4>
+                </article>
+                <article class="" >
+                    <img src="whatto.jpg" style="width:100px; ">
+                    <h3 style="font-family: 'Acme', sans-serif; color: #EF4135;">Food Collection</h3>
+                    <h4><a href="#"  style="font-family: 'DancingScript', cursive;font-size:2em; color: #1A52AE">Health Articles</a></h4>
+                    <p style="font-size:1em;font-family: 'Questrial', sans-serif;">10 Items.</p>
+                </article>
+                <article class="" >
+                    <img src="whatto1.jpg" style="width:100px; ">
+                    <h3  style="font-family: 'Acme', sans-serif; color: #EF4135">Reviews</h3>
+                    <h4><a href="#"  style="font-family: 'DancingScript', cursive;font-size:2em; color: #1A52AE">#Nutritional Blogs.</a></h4>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="parallax3">
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div id="whatto" style="width:40%;margin-right:30%;margin-left:30%;margin-bottom:40px;">
+            <p style="font-family: 'PatuaOne', cursive;font-size:4em;color:#ef4135;
+                 ">
+                What to cook
+            </p>
+        </div>
+        <hr>
+        <hr>
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                    <li data-target="#myCarousel" data-slide-to="6"></li>
+                    <li data-target="#myCarousel" data-slide-to="7"></li>
+                    <li data-target="#myCarousel" data-slide-to="8"></li>
+
+
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="c12.jpg" alt="Los Angeles" style="width:100%;">
+                        <div class="carousel-caption">
+
+                            <div class="backf" style="width:100%; height:100px;background:white;">
+                                <p>
+                                    <a href="#" style="font-family: 'SedgwickAve', cursive; font-size:2em;color:#F17486;">
+                                        This flat bread dough is what you knead for pita and pizza..
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item">
+                        <img src="c2.jpg" alt="Chicago" style="width:100%;">
+                        <div class="carousel-caption">
+                            <div class="backf" style="width:100%; height:100px;background:white;">
+                                <p>
+                                    <a href="#" style="font-family: 'SedgwickAve', cursive; font-size:2em;color:#FE3C3A;">
+                                        Neil Perry's quick honey chicken..
+                                    </a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="c3.jpg" alt="New york" style="width:100%;">
+                        <div class="carousel-caption">
+                            <div class="backf" style="width:100%; height:100px;background:white;">
+                                <p>
+                                    <a href="#" style="font-family: 'SedgwickAve', cursive; font-size:2em;color:#4DBA49; ">
+                                        A bunch of asparagus recipes for spring.
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="c4.jpg" alt="New york" style="width:100%;">
+                        <div class="carousel-caption">
+                            <div class="backf" style="width:100%; height:100px;background:white;">
+                                <p>
+                                    <a href="#" style="font-family: 'SedgwickAve', cursive; font-size:2em;color:#56B981;">
+                                        A bunch of asparagus recipes for spring.
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="c5.jpg" alt="New york" style="width:100%;">
+                        <div class="carousel-caption">
+                            <div class="backf" style="width:100%; height:100px;background:white;"><p><a href="#" style="font-family: 'SedgwickAve', cursive; font-size:2em;color:#FEA79A;
+                    "> A bunch of asparagus recipes for spring.</a></p></div>
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <img src="c6.jpg" alt="New york" style="width:100%;">
+                        <div class="carousel-caption">
+                            <div class="backf" style="width:100%; height:100px;background:white;"><p><a href="#" style="font-family: 'SedgwickAve', cursive; font-size:2em;color:#FDCC5C;
+                    "> A bunch of asparagus recipes for spring.</a></p></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="c7.jpg" alt="New york" style="width:100%;">
+                        <div class="carousel-caption">
+                            <div class="backf" style="width:100%; height:100px;background:white;">
+                                <p><a href="#" style="font-family: 'SedgwickAve', cursive; font-size:2em;color:#56B94C;
+                    "> A bunch of asparagus recipes for spring.</a></p></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="c8.jpg" alt="New york" style="width:100%;">
+                    </div>
+                    <div class="item">
+                        <img src="c9.jpg" alt="New york" style="width:100%;">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<br>
+
+<!-- video -->
+
+<div class="container">
+    <div class="row">
+        <div style="width:60%;margin-right:20%;margin-left:20%;margin-bottom:40px;">
+            <p style="font-family: 'PatuaOne', cursive;font-size:3.5em;color:#ef4135;">
+            How to live a Healthy life ?
+            </p>
+        </div>
+        <div class="col-lg-1">
+
+        </div>
+        <div class="col-lg-10">
+
+            <video width="100%" controls>
+                <source src="livehealthy.mp4" type="video/mp4">
+
+            </video>
+
+            <div class="col-lg-1">
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- footer-->
+
+
+<footer>
+    <div class="wrapper">
+        <ul>
+            <li>New York Restaurant</li>
+            <li>3926 Anmoore Road</li>
+            <li>New York, NY 10014</li>
+            <li>718-749-1714</li>
+        </ul>
+        <ul>
+            <li>France Restaurant</li>
+            <li>68, rue da le Couronne</li>
+            <li>75002 PARIS</li>
+            <li>02.94.23.69.56</li>
+        </ul>
+        <ul>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <ul>
+            <li><img src="images/white-logo.png" alt="logo"></li>
+            <li>&copy; All rights reserved 2015</li>
+
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

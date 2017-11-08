@@ -1,0 +1,80 @@
+h1{
+
+	text-decoration: none;
+}
+@font-face {
+	font-family: Arvo;
+	src: url(Arvo-Regular.ttf);
+}
+@font-face {
+	font-family: DancingScript;
+	src: url(DancingScript-Bold.ttf);
+}
+@font-face {
+	font-family: Acme;
+	src: url(Acme-Regular.ttf);
+}
+@font-face {
+	font-family: Questrial;
+	src: url(Questrial-Regular.ttf);
+}
+@font-face {
+	font-family: PatuaOne;
+	src: url(PatuaOne-Regular.ttf);
+}
+@font-face {
+	font-family: Lobster;
+	src: url(Lobster-Regular.ttf);
+}
+@font-face {
+	font-family: Pacifico;
+	src: url(Pacifico-Regular.ttf);
+}
+@font-face {
+	font-family: Courgette;
+	src: url(Courgette-Regular.ttf);
+}
+@font-face {
+	font-family: SedgwickAve;
+	src: url(SedgwickAve-Regular.ttf);
+}
+@font-face {
+	font-family: ContrailOne;
+	src: url(ContrailOne-Regular.ttf);
+}
+@font-face {
+	font-family: FugazOne;
+	src: url(FugazOne-Regular.ttf);
+}
+@font-face {
+	font-family: Slabo27px;
+	src: url(Slabo27px-Regular.ttf);
+}
+@font-face {
+	font-family: UbuntuCondensed;
+	src: url(UbuntuCondensed-Regular.ttf);
+}
+@font-face {
+	font-family: Oswald;
+	src: url(Oswald-Regular.ttf);
+}
+@font-face {
+	font-family: BreeSerif;
+	src: url(BreeSerif-Regular.ttf);
+}
+@font-face {
+	font-family: Cookie;
+	src: url(Cookie-Regular.ttf);
+}
+@font-face {
+	font-family: BenchNine;
+	src: url(BenchNine-Bold.ttf);
+}
+@font-face {
+	font-family: CodaCaption;
+	src: url(CodaCaption-ExtraBold.ttf);
+}
+@font-face {
+	font-family: PathwayGothic;
+	src: url(PathwayGothicOne-Regular.ttf);
+}
